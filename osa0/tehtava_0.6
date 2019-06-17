@@ -1,0 +1,10 @@
+Kun käyttäjä lähettää lomakkeen:
+Javascript koodi estää html-lomakkeen oletustoiminnan ja lisää kirjoitetun tekstin suoraan näkyvissä olevalle listalle
+ilman sivun päivitystä.
+
+Tämän jälkeen js-koodi lähettää lomakkeen tiedot POST:lla palvelimelle, jossa ne tallentuvat tietokantaan.
+
+selain->pavelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+--> lähetetään lomakkeen sisältö jsonina ilman sivunlatausta: {content: "asda", date: "2019-06-17T18:26:42.400Z"}
+palvelin->selain:
+--> JSON: {"message":"note created"}
