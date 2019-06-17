@@ -1,0 +1,18 @@
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin-->selain: HTML-koodi
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin-->selain: main.js
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: [{"content":"HTML is easy","date":"2019-05-23T17:30:31.098Z"}...
+
+Kun käyttäjä lähettää lomakkeen:
+Javascript koodi estää html-lomakkeen oletustoiminnan ja lisää kirjoitetun tekstin suoraan näkyvissä olevalle listalle.
+Tämän jälkeen koodi lähettää lomakkeen tiedot POST:lla palvelimelle, jossa ne tallentuvat tietokantaan.
+
+selain->pavelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+--> lähetetään lomakkeen sisältö ilman sivunlatausta: {content: "asda", date: "2019-06-17T18:26:42.400Z"}
+palvelin->selain:
+--> JSON: {"message":"note created"}
